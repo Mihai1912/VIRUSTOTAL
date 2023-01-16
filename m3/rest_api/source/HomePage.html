@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HomePage</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="img/video1.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+<div class="container-fluid" style="position: absolute; background-color: rgba(0, 0, 0, 0.7);height: 100%;">
+    <div class="row buttons justify-content-end">
+        
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:6em;margin-right: 1em;">Login</button>
+
+            <div id="id01" class="modal">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+            
+                <div class="container">
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="uname" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                <a href="HomePageAuth.html"><button type="submit">Login</button></a>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                </div>
+            
+                <div class="container" style="background-color: rgba(94, 114, 144, 1) ;">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+            </div>
+        
+        
+            <button onclick="document.getElementById('id02').style.display='block'" style="width:6em;background-color: rgb(133, 133, 133);border-radius: 5%;">Register</button>
+
+            <div id="id02" class="modal">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+            
+                <div class="container">
+                <label for="uname"><b>Email</b></label>
+                <input type="text" placeholder="Enter Mail" name="uname" required>
+
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                    
+                <a href="HomePageAuth.html"><button type="submit">Register</button></a>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                </div>
+            
+                <div class="container" style="background-color:rgba(94, 114, 144, 1)">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+            </form>
+            </div>
+  
+    </div>
+
+
+    
+      <div class="d-flex align-items-start">
+        <center>
+          <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="margin-top: 19em; margin-left: 30em;">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">File</button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Url</button>
+          </div>
+        </center>
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <div class="name-logo">
+              <center>
+                <img src="img/logo-removebg-preview1.png" style="height: 15em;border-radius: 5%;margin-top: 15em;">
+                <h4 style="width: 600px; color:  #6b84a7; font-family:  Arial, Helvetica, sans-serif;">Analyse suspicious files and URLs to detect malware and other breaches</h3>
+              </center>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" style="margin-left: 5em; margin-top: 3em;">
+            <center>
+              <img src="./img/files-removebg-preview.png" style="width: 100px; margin-top: 10em; filter: invert(100%);">
+              <div class="filecont"  style="margin-top: 2em;">
+                <div class="card">
+                  <h3>Upload Files</h3>
+                  <div class="drop_box">
+                    <header>
+                      <h4>Select File here</h4>
+                    </header>
+                    <p></p>
+                    <input type="file" hidden accept="" id="fileID" style="display:none;">
+                    <button class="btn">Scan</button>
+                    <button class="btn">Add file</button>
+                  </div>
+                </div>
+              </div>
+            </center>  
+          </div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" style="margin-top: 15em; margin-left: 10em;">
+            <center>
+              <img src="./img/url-removebg-preview.png" style="width: 100px; filter: invert(100%);">
+              <div class="url" style="background-color: #ffffff; border-radius: 10px; height: 10em; width: 30em;">
+                <div class="urlcont" style=" margin-top: 2em;">
+                  <input type="url" placeholder="Enter URL" name="psw" style="width: 400px; margin-top: 2em;" required>
+                </div>
+                <div class="urlbtn" style="margin-top: 2em;">
+                  <button class="urlbutton" style="background-color: #4d5e77; border-radius: 10px;">Scan</button>
+                  <button class="urlbutton" style="background-color: #4d5e77; border-radius: 10px;">Add URL</button>
+                </div>
+              </div>
+            </center>  
+          </div>
+        </div>
+      </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+const dropArea = document.querySelector(".drop_box"),
+  button = dropArea.querySelector("button"),
+  dragText = dropArea.querySelector("header"),
+  input = dropArea.querySelector("input");
+let file;
+var filename;
+
+button.onclick = () => {
+  input.click();
+};
+
+input.addEventListener("change", function (e) {
+  var fileName = e.target.files[0].name;
+  let filedata = `
+    <form action="" method="post">
+    <div class="form">
+    <h4>${fileName}</h4>
+    <input type="email" placeholder="Enter email upload file">
+    <button class="btn">Upload</button>
+    </div>
+    </form>`;
+  dropArea.innerHTML = filedata;
+});
+
+function register(data) {
+    fetch('http://0.0.0.0:8080/api/v1/signun', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then((response) => response.json())
+.then((data) => {
+  console.log(data);
+});
+}
+
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+doctype html
+html
+	head
+		title Filter test page
+		:css
+			body { background-color: #CBCBCB; }
+	body
+		:markdown
+			This is a test paragraph in syntax.
